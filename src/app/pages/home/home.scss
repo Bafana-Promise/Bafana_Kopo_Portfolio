@@ -92,6 +92,7 @@
 
 .mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
     height: 36px;
+    border-radius: 4px
 }
 
 .mat-mdc-raised-button.mat-primary, .mat-mdc-unelevated-button.mat-primary {
@@ -102,13 +103,10 @@
 .mat-mdc-raised-button.mat-primary {
     --mdc-protected-button-container-color: #009688;
     --mdc-protected-button-label-text-color: #fff;
+    border: 2px solid #009688;
 }
 
 .mat-mdc-raised-button {
-    height: var(--mdc-protected-button-container-height, 36px);
-    border-radius: var(--mdc-protected-button-container-shape, var(--mdc-shape-small, 4px))
---mdc-protected-button-container-shape is not defined
-;
     box-shadow: var(--mdc-protected-button-container-elevation);
 }
 
@@ -132,6 +130,7 @@
 .mat-mdc-raised-button.mat-accent {
     --mdc-protected-button-container-color: #ffab40;
     --mdc-protected-button-label-text-color: #000;
+    border: 2px solid #ffab40;
 }
 
 
