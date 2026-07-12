@@ -26,6 +26,42 @@ app-navbar {
     background-color: #fafafa;
 }
 
+mat-drawer {
+  width: 180px;
+//   padding: 20px;
+}
+
 app-footer {
     flex-shrink: 0;
+}
+
+mat-nav-list {
+  margin-top: 80px;
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item {
+    border-radius: 0px;
+}
+
+.mat-drawer-inner-container {
+    background: white;
+}
+
+.example-container.drawer-open {
+  mat-drawer-content {
+    background-color: #646464;
+  }
+}
+
+:host ::ng-deep .link .mdc-list-item__primary-text {
+  color: #009688 !important;
+}
+
+:host ::ng-deep .link:hover .mdc-list-item__primary-text {
+  color: black !important;
+}
+
+
+.mat-drawer.mat-drawer-end {
+    border-bottom-left-radius: 0;
 }

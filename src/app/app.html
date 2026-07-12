@@ -1,9 +1,27 @@
 <div class="routerOutlet">
-    <app-navbar></app-navbar>
+    <app-navbar (menuClick)="drawer.toggle()"></app-navbar>
 
-    <main class="content">
-        <router-outlet></router-outlet>
-    </main>
+    <mat-drawer-container class="example-container" [class.drawer-open]="drawer.opened">
+        <!-- <mat-drawer position="end" #drawer mode="over"> -->
+        <mat-drawer position="end" #drawer mode="over" (openedChange)="toggleScroll($event)">
+            <mat-nav-list>
+                <a class="on-hover" mat-list-item routerLink="/" routerLinkActive="link"
+                    [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                <a class="on-hover" mat-list-item routerLink="/about" routerLinkActive="link">About</a>
+                <a class="on-hover" mat-list-item routerLink="/projects" routerLinkActive="link">Projects</a>
+                <a class="on-hover" mat-list-item routerLink="/mentorship" routerLinkActive="link">Mentorship</a>
+                <a class="on-hover" mat-list-item routerLink="/contact" routerLinkActive="link">Contact</a>
+                <a class="on-hover" mat-list-item routerLink="/testimonials" routerLinkActive="link">Testimonials</a>
+            </mat-nav-list>
+        </mat-drawer>
+
+        <mat-drawer-content>
+
+            <main class="content">
+                <router-outlet></router-outlet>
+            </main>
+        </mat-drawer-content>
+    </mat-drawer-container>
 
     <app-footer></app-footer>
 </div>

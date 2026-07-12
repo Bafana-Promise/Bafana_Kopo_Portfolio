@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -10,4 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar {
+
+  @Output() menuClick = new EventEmitter<void>();
+
+  openMenu() {
+    this.menuClick.emit();
+  }
+
+}

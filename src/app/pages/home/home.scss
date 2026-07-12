@@ -166,14 +166,8 @@
 }
 
 @media only screen and (max-width: 680px) {
-    .container {
-        padding: 5px;
+    .container-mobile {
         width: 100%;
-    }
-
-    .container .img-container {
-        height: 252px;
-        overflow: hidden;
-        background-position: top;
+        justify-content: center;
     }
 }
