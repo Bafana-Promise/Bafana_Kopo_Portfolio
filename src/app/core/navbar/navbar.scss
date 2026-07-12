@@ -21,8 +21,22 @@
     width: 90%;
 }
 
+/* Default (desktop) */
+.hide-items {
+  display: flex;
+}
+
+.show-items {
+  display: none;
+}
+
+/* Mobile */
 @media only screen and (max-width: 777px) {
-    .hide-item {
-        display: none;
-    }
+  .hide-items {
+    display: none;
+  }
+
+  .show-items {
+    display: flex;
+  }
 }

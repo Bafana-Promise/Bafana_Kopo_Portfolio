@@ -30,6 +30,7 @@
 
 .header-font {
     font-size: 50px;
+    line-height: 1.1;
 }
 
 .accent,
@@ -53,12 +54,16 @@
     background-color: var(--mdc-protected-button-container-color, transparent);
 }
 
-.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
     height: 36px;
     border-radius: 4px
 }
 
-.mat-mdc-raised-button.mat-primary, .mat-mdc-unelevated-button.mat-primary {
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
     --mat-mdc-button-persistent-ripple-color: #fff;
     --mat-mdc-button-ripple-color: rgba(255, 255, 255, .1);
 }
@@ -86,7 +91,10 @@
     background-color: var(--mdc-protected-button-container-color, transparent);
 }
 
-.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
     height: 36px;
 }
 
@@ -106,7 +114,8 @@
     width: 40%;
 }
 
-.container, .img-container {
+.container,
+.img-container {
     border: 2px solid;
     border-radius: 50%;
 }
@@ -120,15 +129,16 @@
     box-sizing: border-box;
 }
 
-.accent, .accent-on-hover:hover {
+.accent,
+.accent-on-hover:hover {
     color: #ff9800;
 }
 
 .container .img-container {
-  background-image: url('/profile.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('/profile.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container .img-container {
@@ -137,12 +147,14 @@
     background-position: top;
 }
 
-.container, .img-container {
+.container,
+.img-container {
     border: 2px solid;
     border-radius: 50%;
 }
 
-.primary, .primary-on-hover:hover {
+.primary,
+.primary-on-hover:hover {
     color: #009688;
 }
 
@@ -150,5 +162,18 @@
     .column-reverse-mobile {
         flex-direction: column-reverse;
         gap: 2em;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .container {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .container .img-container {
+        height: 252px;
+        overflow: hidden;
+        background-position: top;
     }
 }
