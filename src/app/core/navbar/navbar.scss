@@ -1,7 +1,28 @@
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.nav {
+    height: 80px;
+    box-shadow: 0 0 5px #dddddd;
     background: white;
-    z-index: 100;
+}
+
+.nav .side-container {
+    width: 222px;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.primary,
+.primary-on-hover:hover {
+    color: #009688;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+@media only screen and (max-width: 777px) {
+    .hide-item {
+        display: none;
+    }
 }

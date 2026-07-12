@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.routerOutlet {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background: white;
+}
+
+.content {
+    flex: 1;
+    padding-top: 70px; // same as navbar height
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+app-footer {
+    flex-shrink: 0;
+}

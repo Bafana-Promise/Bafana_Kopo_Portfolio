@@ -1,1 +1,40 @@
-<p>navbar works!</p>
+<div class="nav flex center-center">
+    <div class="flex spacebetween-center w-90">
+        <div routerLink="/" class="side-container">
+            <h3>
+                <span class="accent">@Bafana Promise</span> Kopo
+            </h3>
+        </div>
+
+        <div class="flex gap-1em ng-star-inserted hide-item">
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary" routerLink="/"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <b>Home</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary"
+                routerLink="about">
+                <b>About</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary"
+                routerLink="projects">
+                <b>Projects</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary"
+                routerLink="mentorship">
+                <b>Mentorship</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary"
+                routerLink="contact">
+                <b>Contact</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" routerLinkActive="primary"
+                routerLink="testimonials">
+                <b>Testimonials</b>
+            </p>
+        </div>
+
+        <div>
+            <p>Hi</p>
+        </div>
+    </div>
+</div>
