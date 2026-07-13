@@ -82,3 +82,15 @@ body {
 html {
   scrollbar-width: none;
 }
+
+.column {
+    flex-direction: column;
+}
+
+.header-font {
+    font-size: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}

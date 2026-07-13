@@ -158,6 +158,43 @@
     color: #009688;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
+.mat-mdc-card {
+    position: relative;
+    border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 4px));
+    background-color: var(--mdc-elevated-card-container-color, transparent);
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--mdc-elevated-card-container-color, transparent);
+}
+
+.mdc-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.lessons,
+.projects {
+    width: 31%;
+}
+
+.gap-2em {
+    gap: 2em;
+}
+
+
+:host ::ng-deep .mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {
+  border-width: 0 !important;
+  border-radius: 32px !important;
+  background: #e0e0e0 !important;
+}
+
+
+
 @media only screen and (max-width: 680px) {
     .column-reverse-mobile {
         flex-direction: column-reverse;

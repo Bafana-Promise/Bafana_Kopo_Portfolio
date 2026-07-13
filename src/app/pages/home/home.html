@@ -36,8 +36,136 @@
             </div>
         </div>
     </div>
-    
+
     <div class="p-24px b-box">
-        <p>Hi there!</p>
+        <div class="flex column gap-1em">
+            <h2 class="header-font">Projects</h2>
+
+            <div _ngcontent-qht-c35="" class="flex gap-1em wrap">
+                <mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/by-twins.png" alt="Customer Care"></div>
+                    <mat-card-content _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">Customer Care</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/covid.png" alt="Corona Count"></div><mat-card-content
+                        _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">Corona Count</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/eazi-connect.png" alt="EaziConnect"></div>
+                    <mat-card-content _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">EaziConnect</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/eazi-ride.png" alt="EaziRide"></div><mat-card-content
+                        _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">EaziRide</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/galleries-pret.png" alt="Galleries Pret"></div>
+                    <mat-card-content _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">Galleries Pret</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/visa-tracker.png" alt="Visa Tracker"></div>
+                    <mat-card-content _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">Visa Tracker</h2>
+                    </mat-card-content>
+                </mat-card><mat-card _ngcontent-qht-c35=""
+                    class="mat-mdc-card mdc-card projects accent-on-hover pointer ng-star-inserted">
+                    <div _ngcontent-qht-c35="" class="flex center-center m-bottom-1em"><img _ngcontent-qht-c35=""
+                            mat-card-image="" class="mat-mdc-card-image mdc-card__media project-card-image"
+                            src="../../../assets/images/projects/kasidevs.png" alt="KasiDevs"></div><mat-card-content
+                        _ngcontent-qht-c35="" class="mat-mdc-card-content text-center">
+                        <h2 _ngcontent-qht-c35="">KasiDevs</h2>
+                    </mat-card-content>
+                </mat-card><!---->
+            </div>
+        </div>
+
+
+                <div class="flex column gap-1em">
+            <h2 class="header-font">Skills</h2>
+
+            @for (section of skillSections; track section.title) {
+
+            <div class="skills-section">
+
+                <h3>{{ section.title }}</h3>
+
+                <mat-chip-listbox class="skill-chip-list">
+
+                    @for (skill of section.skills; track skill) {
+                    <mat-chip disableRipple>
+                        {{ skill }}
+                    </mat-chip>
+                    }
+
+                </mat-chip-listbox>
+
+            </div>
+
+            }
+        </div>
     </div>
+
+    <!-- <div class="flex column gap-2em">
+        <h2 _ngcontent-qht-c35="" class="header-font">Skills</h2>
+
+        
+        <mat-chip-set aria-label="Fish selection">
+            <mat-chip>Responsive Design</mat-chip>
+            <mat-chip>Two fish</mat-chip>
+            <mat-chip>Three fish</mat-chip>
+            <mat-chip>Four fish</mat-chip>
+        </mat-chip-set>
+    </div> -->
+
+
+<!-- 
+    <div class="p-24px b-box">
+        <div class="flex column gap-1em">
+            <h2 class="header-font">Skills</h2>
+
+            @for (section of skillSections; track section.title) {
+
+            <div class="skills-section">
+
+                <h3>{{ section.title }}</h3>
+
+                <mat-chip-listbox class="skill-chip-list">
+
+                    @for (skill of section.skills; track skill) {
+                    <mat-chip disableRipple>
+                        {{ skill }}
+                    </mat-chip>
+                    }
+
+                </mat-chip-listbox>
+
+            </div>
+
+            }
+        </div>
+    </div> -->
+
 </div>
