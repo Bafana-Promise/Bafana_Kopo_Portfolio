@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="p-24px b-box">
+    <div class="p-24px b-box project-expreince-section">
         <div class="flex column gap-1em">
             <h2 class="header-font">Projects</h2>
 
@@ -103,46 +103,6 @@
         </div>
 
 
-                <div class="flex column gap-1em">
-            <h2 class="header-font">Skills</h2>
-
-            @for (section of skillSections; track section.title) {
-
-            <div class="skills-section">
-
-                <h3>{{ section.title }}</h3>
-
-                <mat-chip-listbox class="skill-chip-list">
-
-                    @for (skill of section.skills; track skill) {
-                    <mat-chip disableRipple>
-                        {{ skill }}
-                    </mat-chip>
-                    }
-
-                </mat-chip-listbox>
-
-            </div>
-
-            }
-        </div>
-    </div>
-
-    <!-- <div class="flex column gap-2em">
-        <h2 _ngcontent-qht-c35="" class="header-font">Skills</h2>
-
-        
-        <mat-chip-set aria-label="Fish selection">
-            <mat-chip>Responsive Design</mat-chip>
-            <mat-chip>Two fish</mat-chip>
-            <mat-chip>Three fish</mat-chip>
-            <mat-chip>Four fish</mat-chip>
-        </mat-chip-set>
-    </div> -->
-
-
-<!-- 
-    <div class="p-24px b-box">
         <div class="flex column gap-1em">
             <h2 class="header-font">Skills</h2>
 
@@ -165,7 +125,367 @@
             </div>
 
             }
+
+            <div class="section-color ng-star-inserted">
+                <h3 class="m-bottom-1em">My Tech Stack</h3>
+                <div class="flex gap-1em wrap ng-star-inserted">
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/html.png"
+                                alt="HTML 5">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>HTML 5</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/css3.png"
+                                alt="CSS3">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>CSS3</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/sass.png"
+                                alt="SCSS">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>SCSS</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/javascript.png"
+                                alt="Javascript">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>Javascript</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/typescript.png"
+                                alt="Typescript">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>Typescript</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/nodejs.png"
+                                alt="NodeJs">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>NodeJs</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/express.png"
+                                alt="ExpressJs">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>ExpressJs</h2>
+                        </mat-card-content>
+                    </mat-card><mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/mongodb.jpg"
+                                alt="MongoDB">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>MongoDB</h2>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
+                        <div class="flex center-center m-bottom-1em">
+                            <img mat-card-image="" width="80" height="80"
+                                class="mat-mdc-card-image mdc-card__media round white-bg" src="/icon/postgresql.png"
+                                alt="PostGreSQL">
+                        </div>
+                        <mat-card-content class="mat-mdc-card-content text-center">
+                            <h2>PostGreSQL</h2>
+                        </mat-card-content>
+                    </mat-card><!---->
+                </div>
+            </div>
+
         </div>
-    </div> -->
+
+        <div class="flex column gap-1em">
+            <h2 _ngcontent-lly-c35="" class="header-font">Experience</h2>
+            <div class="flex expreince-big-screen">
+
+                <!-- Left Menu -->
+                <div class="w-30 ">
+
+                    <div *ngFor="let company of companies; let i = index"
+                        class="menu-item primary-on-hover pointer flex column left-menu-companies company-experience"
+                        [class.primary]="selectedCompany === i" (click)="selectedCompany = i">
+
+                        <p class="font-18">
+                            {{ company.company }}
+                        </p>
+
+                        <small>
+                            {{ company.duration }}
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="w-70">
+
+                    <mat-vertical-stepper>
+
+                        <mat-step *ngFor="let position of companies[selectedCompany].positions"
+                            [label]="position.title">
+
+                            <p>
+                                <b>{{ position.type }}</b>
+                            </p>
+
+                            <p class="primary">
+                                <small>{{ position.period }}</small>
+                            </p>
+
+                            <p>
+                                {{ position.description }}
+                            </p>
+
+                        </mat-step>
+
+                    </mat-vertical-stepper>
+
+                </div>
+
+            </div>
+
+            <div class="expreince-mobile-screen">
+                <mat-accordion multi>
+
+                    <mat-expansion-panel *ngFor="let company of companies">
+
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{ company.company }}
+                            </mat-panel-title>
+
+                            <mat-panel-description>
+                                {{ company.duration }}
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <mat-vertical-stepper>
+
+                            <mat-step *ngFor="let position of company.positions" [label]="position.title">
+
+                                <p>
+                                    <b>{{ position.type }}</b>
+                                </p>
+
+                                <p class="primary">
+                                    <small>{{ position.period }}</small>
+                                </p>
+
+                                <p>
+                                    {{ position.description }}
+                                </p>
+
+                            </mat-step>
+
+                        </mat-vertical-stepper>
+
+                    </mat-expansion-panel>
+
+                </mat-accordion>
+            </div>
+        </div>
+
+        <div class="b-box">
+            <div class="flex column gap-1em">
+                <h2 class="header-font">About Bafana Promise</h2>
+                <p>👋 Hi, I'm Bafana Promise Kopo, a Full-Stack JavaScript Developer with over 4 years of experience
+                    building scalable web and mobile applications. I enjoy creating clean, efficient, and user-focused
+                    solutions using modern JavaScript technologies across the frontend and backend. I'm passionate about
+                    solving real-world problems, continuously learning, and delivering software that makes an impact.
+                </p>
+                <h2>From Taxify/Bolt Driver to Developer</h2>
+                <div class="about-content">
+                    <p>
+                        My journey into software development began at my local church, where I was introduced to
+                        programming by Tukiso
+                        Maketa. He took the time to teach me the fundamentals of coding and showed me that a career in
+                        software
+                        development was possible.
+                    </p>
+
+                    <p>
+                        We didn't have access to expensive equipment or ideal learning environments. Resources were
+                        limited, and I didn't
+                        even own a computer at the time. Despite these challenges, Tukiso encouraged me to keep learning
+                        and make the most
+                        of what I had.
+                    </p>
+
+                    <p>
+                        Inspired by his mentorship, I began learning HTML and CSS using a borrowed laptop and free
+                        online resources. I made
+                        the most of every opportunity to learn, often studying and practicing whenever I had spare time
+                        at work. Every
+                        small step brought me closer to achieving my goal of becoming a software developer.
+                    </p>
+
+                    <p>
+                        What started as a simple introduction to coding soon grew into a passion and eventually a
+                        profession. Today, I have
+                        five years of professional experience as a Full-Stack JavaScript Developer, building scalable
+                        web and mobile
+                        applications. I'm deeply grateful to Tukiso Maketa for believing in me and introducing me to
+                        software development,
+                        and to everyone else who supported and encouraged me along the way.
+                    </p>
+                </div>
+                <div class="flex gap-1em"><button mat-raised-button="" color="primary" routerLink="/about"
+                        class="mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"
+                        tabindex="0"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span
+                            class="mdc-button__label">Learn More</span><span
+                            class="mat-mdc-focus-indicator"></span><span matripple=""
+                            class="mat-ripple mat-mdc-button-ripple"></span><span
+                            class="mat-mdc-button-touch-target"></span></button></div>
+            </div>
+        </div>
+
+        <div _ngcontent-ael-c35="" class="custom-carousel-container">
+            <h2 _ngcontent-ael-c35="" class="header-font">Testimonials</h2>
+
+            <p _ngcontent-ael-c35="">Dive into the shared experiences of those who've entrusted me with their projects
+                and educational journeys. From satisfied clients to aspiring developers, explore the diverse array of
+                success stories that highlight the impact of my services and mentorship programs.</p>
+
+            <div _ngcontent-ael-c35="" class="custom-carousel flex">
+
+                <div class="card-container flex center ng-star-inserted">
+
+                    <mat-card class="mat-mdc-card mdc-card">
+
+                        <div class="flex center-center m-bottom-1em profile-image-container accent">
+
+                            <img mat-card-image="" class="mat-mdc-card-image mdc-card__media testimony-card-image"
+                                [src]="testimonials[currentIndex].image" [alt]="testimonials[currentIndex].name">
+
+                        </div>
+
+
+                        <mat-card-content class="mat-mdc-card-content">
+
+                            <h2>
+                                {{ testimonials[currentIndex].name }}
+                            </h2>
+
+
+                            <mat-card-subtitle class="mat-mdc-card-subtitle">
+                                {{ testimonials[currentIndex].role }}
+                            </mat-card-subtitle>
+
+
+                            <p *ngFor="let paragraph of testimonials[currentIndex].paragraphs"
+                                class="m-bottom-1em font-14 ng-star-inserted">
+
+                                {{ paragraph }}
+
+                            </p>
+
+
+                        </mat-card-content>
+
+                    </mat-card>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div _ngcontent-ael-c35="" class="ng-star-inserted testimonials-button">
+
+
+                <button _ngcontent-ael-c35="" mat-mini-fab="" color="primary" mattooltip="Back"
+                    class="mat-mdc-tooltip-trigger back mdc-fab mdc-fab--mini mat-mdc-mini-fab mat-primary mat-mdc-button-base"
+                    (click)="previousTestimonial()" [disabled]="currentIndex === 0">
+
+
+                    <span class="mat-mdc-button-persistent-ripple mdc-fab__ripple"></span>
+
+
+                    <mat-icon _ngcontent-ael-c35="" role="img"
+                        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">
+
+                        navigate_before
+
+                    </mat-icon>
+
+
+                    <span class="mdc-button__label"></span>
+
+                    <span class="mat-mdc-focus-indicator"></span>
+
+                    <span matripple="" class="mat-ripple mat-mdc-button-ripple"></span>
+
+                    <span class="mat-mdc-button-touch-target"></span>
+
+
+                </button>
+
+
+
+                <button _ngcontent-ael-c35="" mat-mini-fab="" color="primary" mattooltip="Next"
+                    class="mat-mdc-tooltip-trigger next mdc-fab mdc-fab--mini mat-mdc-mini-fab mat-primary mat-mdc-button-base"
+                    (click)="nextTestimonial()" [disabled]="currentIndex === testimonials.length - 1">
+
+
+                    <span class="mat-mdc-button-persistent-ripple mdc-fab__ripple"></span>
+
+
+                    <mat-icon _ngcontent-ael-c35="" role="img"
+                        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">
+
+                        navigate_next
+
+                    </mat-icon>
+
+
+                    <span class="mdc-button__label"></span>
+
+                    <span class="mat-mdc-focus-indicator"></span>
+
+                    <span matripple="" class="mat-ripple mat-mdc-button-ripple"></span>
+
+                    <span class="mat-mdc-button-touch-target"></span>
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </div>

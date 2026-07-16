@@ -188,23 +188,231 @@
 
 
 :host ::ng-deep .mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {
-  border-width: 0 !important;
-  border-radius: 32px !important;
-  background: #e0e0e0 !important;
+    border-width: 0 !important;
+    border-radius: 32px !important;
+    background: #e0e0e0 !important;
+}
+
+.m-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.mat-mdc-card {
+    position: relative;
+    border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 4px));
+    background-color: var(--mdc-elevated-card-container-color, transparent);
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--mdc-elevated-card-container-color, transparent);
+}
+
+.mdc-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.lessons,
+.projects {
+    width: 31%;
+}
+
+.lessons {
+    padding-top: 1em;
+}
+
+.text-center {
+    text-align: center;
 }
 
 
+.experience .menu-item {
+    padding: 10px;
+    border-left: 3px solid;
+}
+
+.experience .menu-item {
+    padding: 10px;
+    border-left: 3px solid;
+}
+
+
+
+.project-expreince-section {
+    width: 76%;
+}
+
+
+.primary {
+    position: relative;
+    color: #009688;
+    border-left-color: #009688 !important;
+}
+
+.left-menu-companies {
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+
+.company-experience:hover {
+    position: relative;
+    color: #009688;
+    border-left-color: #009688 !important;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.custom-carousel-container .custom-carousel .card-container {
+    padding-top: 60px;
+    min-width: 100%;
+}
+
+.center {
+    justify-content: center;
+}
+
+.custom-carousel-container .custom-carousel .card-container mat-card {
+    width: 100%;
+    min-width: calc(100% - 110px);
+    max-width: calc(100% - 110px);
+}
+
+.mat-mdc-card {
+    position: relative;
+    border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 4px));
+    background-color: var(--mdc-elevated-card-container-color, transparent);
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--mdc-elevated-card-container-color, transparent);
+}
+
+
+.mdc-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.custom-carousel-container .custom-carousel .card-container mat-card .profile-image-container {
+    height: 50px;
+}
+
+.m-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.accent,
+.accent-on-hover:hover {
+    color: #ff9800;
+}
+
+.mat-mdc-card-content:last-child {
+    padding-bottom: 16px;
+}
+
+.mat-mdc-card-content {
+    display: block;
+    padding: 0 16px;
+}
+
+.mat-mdc-fab:not(.mdc-fab--extended),
+.mat-mdc-mini-fab:not(.mdc-fab--extended) {
+    border-radius: var(--mdc-fab-container-shape, 50%);
+}
+
+.mat-mdc-fab .mat-mdc-button-touch-target,
+.mat-mdc-mini-fab .mat-mdc-button-touch-target {
+    position: absolute;
+    top: 50%;
+    height: 48px;
+    left: 50%;
+    width: 48px;
+    transform: translate(-50%, -50%);
+}
+
+.testimonials-button {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 262px;
+}
+
+.custom-carousel-container .custom-carousel .card-container mat-card .profile-image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    border: 5px solid;
+}
 
 @media only screen and (max-width: 680px) {
     .column-reverse-mobile {
         flex-direction: column-reverse;
         gap: 2em;
     }
+
+    .mat-mdc-fab .mat-mdc-button-touch-target,
+    .mat-mdc-mini-fab .mat-mdc-button-touch-target {
+        position: absolute;
+        top: 50%;
+        height: 48px;
+        left: 50%;
+        width: 48px;
+        transform: translate(-50%, -50%);
+    }
 }
+
 
 @media only screen and (max-width: 680px) {
     .container-mobile {
         width: 100%;
         justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 1284px) {
+    .project-expreince-section {
+        width: 92%;
+    }
+}
+
+// @media only screen and (min-width: 1284px) {
+//     .container-mobile {
+//         // width: 100%;
+//         // justify-content: center;
+//     }
+// }
+
+
+@media only screen and (max-width: 1181px) {
+    .project-expreince-section {
+        width: 100%;
+    }
+}
+
+/* Default (desktop) */
+.expreince-big-screen {
+    display: flex;
+}
+
+.expreince-mobile-screen {
+    display: none;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 777px) {
+    .expreince-big-screen {
+        display: none;
+    }
+
+    .expreince-mobile-screen {
+        display: flex;
     }
 }
