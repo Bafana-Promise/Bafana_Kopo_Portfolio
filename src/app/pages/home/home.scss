@@ -236,13 +236,6 @@
     border-left: 3px solid;
 }
 
-
-
-.project-expreince-section {
-    width: 76%;
-}
-
-
 .primary {
     position: relative;
     color: #009688;
@@ -290,6 +283,13 @@
     border-color: var(--mdc-elevated-card-container-color, transparent);
 }
 
+.w-70 {
+    width: 70%;
+}
+
+.gap-5em {
+    gap: 5em;
+}
 
 .mdc-card {
     display: flex;
@@ -348,6 +348,11 @@
     position: absolute;
     top: -50px;
     border: 5px solid;
+}
+
+p {
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 680px) {

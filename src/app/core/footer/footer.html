@@ -1,1 +1,67 @@
-<p>footer works!</p>
+<div class="footer flex center-center column gap-3em">
+    <div class="flex spacebetween-center w-90 column-mobile gap-1em-mobile">
+        <div class="flex gap-1em">
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary" routerLink="/"
+                [routerLinkActiveOptions]="{ exact: true }">Home</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary"
+                routerLink="about">About</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary"
+                routerLink="projects">Projects</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary"
+                routerLink="mentorship">Mentorship</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary"
+                routerLink="contact">Contact</b>
+            </p>
+            <p class="menu-item primary-on-hover pointer ng-star-inserted" tabindex="0">
+                <b routerLinkActive="primary"
+                routerLink="testimonials">Testimonials</b>
+            </p><!---->
+        </div>
+        <div class="flex gap-1em">
+            <img src="/social_icon/facebook.png" alt="facebook" mattooltip="facebook" width="30" height="30"
+                class="mat-mdc-tooltip-trigger pointer" aria-describedby="cdk-describedby-message-vgd-1-2"
+                cdk-describedby-host="vgd-1"><!---->
+            <img src="/social_icon/github.png" alt="github" mattooltip="github" width="30" height="30"
+                class="mat-mdc-tooltip-trigger pointer github-icon round"
+                aria-describedby="cdk-describedby-message-vgd-1-3" cdk-describedby-host="vgd-1"><!---->
+            <img src="/social_icon/linkedin.png" alt="linkedin" mattooltip="linkedin" width="30" height="30"
+                class="mat-mdc-tooltip-trigger pointer" aria-describedby="cdk-describedby-message-vgd-1-4"
+                cdk-describedby-host="vgd-1"><!---->
+            <img src="/social_icon/twitter.png" alt="twitter" mattooltip="twitter" width="30" height="30"
+                class="mat-mdc-tooltip-trigger pointer" aria-describedby="cdk-describedby-message-vgd-1-5"
+                cdk-describedby-host="vgd-1"><!---->
+        </div>
+    </div>
+    <div class="flex spacebetween-end w-90 column-mobile align-items-center gap-1em-mobile">
+        <div class="flex gap-1em column">
+            <p class="font-18"><b>Interested in working together?</b></p>
+            <div class="flex gap-1em"><button mat-raised-button="" color="primary" routerLinkActive="primary"
+                routerLink="contact"
+                    class="mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"
+                    tabindex="0"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span
+                        class="mdc-button__label">Get In Touch</span><span class="mat-mdc-focus-indicator"></span><span
+                        matripple="" class="mat-ripple mat-mdc-button-ripple"></span><span
+                        class="mat-mdc-button-touch-target"></span></button><button mat-raised-button="" color="accent"
+                    routerLinkActive="primary" routerLink="projects"
+                    class="mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base"
+                    tabindex="0"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span
+                        class="mdc-button__label">Browse Projects</span><span
+                        class="mat-mdc-focus-indicator"></span><span matripple=""
+                        class="mat-ripple mat-mdc-button-ripple"></span><span
+                        class="mat-mdc-button-touch-target"></span></button></div>
+        </div>
+        <div class="flex column">
+            <p><small>© 2026 All Rights Reserved.</small></p>
+            <p><small>Created by Bafana Promise Kopo</small></p>
+        </div>
+    </div>
+</div>
