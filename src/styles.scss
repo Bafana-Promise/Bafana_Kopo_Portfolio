@@ -117,3 +117,45 @@ html {
 .w-80 {
     width: 80%;
 }
+
+.start-center {
+    justify-content: start;
+    align-items: center;
+}
+
+.full-width, app-footer, app-about, app-contact, app-mentorship, app-projects, app-landing, app-thank-you, app-testimonials {
+    width: 100%;
+}
+
+.gap-5em {
+    gap: 5em;
+}
+
+.w-80, .main-section {
+    width: 80%;
+}
+
+.p-24px {
+    padding: 24px;
+}
+
+.b-box {
+    box-sizing: border-box;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.end-center {
+    justify-content: end;
+    align-items: center;
+}
+
+.w-40 {
+    width: 40%;
+}

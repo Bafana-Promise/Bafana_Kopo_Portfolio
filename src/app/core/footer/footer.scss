@@ -10,11 +10,9 @@
 
 .footer {
     padding: 4em 0 3em 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.06),
-        #fff 16px
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.06),
+            #fff 16px);
 }
 
 .gap-3em {
@@ -41,11 +39,15 @@
     background-color: var(--mdc-protected-button-container-color, transparent);
 }
 
-.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
     height: 36px;
 }
 
-.mat-mdc-raised-button.mat-primary, .mat-mdc-unelevated-button.mat-primary {
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
     --mat-mdc-button-persistent-ripple-color: #fff;
     --mat-mdc-button-ripple-color: rgba(255, 255, 255, .1);
 }
@@ -76,11 +78,83 @@
 }
 
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
 p {
     line-height: 25px;
     letter-spacing: 1px;
+}
+
+.nav-mobile {
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 680px) {
+    .gap-1em-mobile {
+        gap: 1em;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .column-mobile {
+        flex-direction: column;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .gap-1em-mobile {
+        gap: 1em;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .align-items-center {
+        align-items: center;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .column-mobile {
+        flex-direction: column;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .column-reverse-mobile {
+        flex-direction: column-reverse;
+        gap: 2em;
+    }
+
+    .footer-menu-wrap {
+        flex-wrap: wrap;
+    }
 }

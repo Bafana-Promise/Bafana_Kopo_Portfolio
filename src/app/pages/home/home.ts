@@ -93,14 +93,14 @@ export class Home {
       ]
     },
     {
-      company: 'Bolt/Uber',
+      company: 'Driver',
       duration: '4 months',
       positions: [
         {
           title: 'Driver Partner',
           type: 'Part-time',
           period: 'Jan 2021 - Apr 2021', // Update these dates if different
-          description: 'Provided safe, reliable and professional transportation services while maintaining a high level of customer satisfaction. Planned efficient routes using GPS navigation, ensured timely pickups and drop-offs, maintained vehicle cleanliness and safety standards, managed trip records, and demonstrated strong time management, communication and problem-solving skills in a fast-paced environment.'
+          description: 'Provided safe, reliable, and professional transportation services for company staff, ensuring timely pickups and drop-offs to and from designated locations. Planned efficient routes using GPS navigation to minimize travel time, adhered to traffic regulations and safety standards, maintained vehicle cleanliness and routine inspections, and kept accurate trip records. Demonstrated excellent time management, communication, and problem-solving skills while delivering a dependable transport service in a fast-paced environment.'
         }
       ]
     },
