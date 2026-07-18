@@ -87,6 +87,10 @@ html {
     flex-direction: column;
 }
 
+.flex {
+    display: flex;
+}
+
 .header-font {
     font-size: 50px;
 }
@@ -158,4 +162,9 @@ html {
 
 .w-40 {
     width: 40%;
+}
+
+.center-center {
+    justify-content: center;
+    align-items: center;
 }

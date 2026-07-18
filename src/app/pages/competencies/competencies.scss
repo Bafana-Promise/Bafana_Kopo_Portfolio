@@ -72,6 +72,11 @@ p {
     --mdc-elevated-card-container-color: #fff;
 }
 
+.lessons .project-card-image, .projects .project-card-image {
+    width: 100%;
+    border-radius: 4px 4px 0 0 !important;
+}
+
 @media only screen and (max-width: 500px) {
 
     .lessons,

@@ -3,12 +3,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-competencies',
   imports: [
     MatButtonModule,
     MatCardModule
   ],
-  templateUrl: './projects.html',
-  styleUrl: './projects.scss',
+  templateUrl: './competencies.html',
+  styleUrl: './competencies.scss',
 })
-export class Projects { }
+export class Competencies {
+
+  openCertificate(url: string): void {
+    window.open(url, '_blank');
+  }
+
+}
