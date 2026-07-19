@@ -1,0 +1,89 @@
+section {
+    min-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.main-section {
+    width: 80%;
+    max-width: 1100px;
+}
+
+.p-24px {
+    padding: 24px;
+}
+
+.header-font {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    max-width: 900px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.gap-2em {
+    gap: 2em;
+}
+
+.gap-5em {
+    gap: 5em;
+}
+
+.m-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.m-bottom-2em {
+    margin-bottom: 2em;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+mat-card {
+    width: 100%;
+    border-radius: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    height: 46px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cancel-btn {
+    background: #f44336 !important;
+    color: white !important;
+}
+
+.btn-border-radius4 {
+    border-radius: 4px;
+}
+
+.submit-btn{
+    background: #009688 !important;
+    color: white !important;
+}

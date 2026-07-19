@@ -1,1 +1,158 @@
-<p>contact works!</p>
+<div class="flex center-center column">
+  <section class="flex column start-center full-width m-bottom-2em">
+    <div class="flex column gap-5em main-section">
+
+      <div class="p-24px b-box">
+
+        <div class="flex column gap-1em">
+
+          <h2 class="header-font">Contact Me</h2>
+
+          <p>
+            Ready to take the next step in your digital journey?
+            Reach out and let's collaborate on transforming your
+            vision into innovative web and mobile solutions!
+          </p>
+
+          <div class="flex center-center">
+
+            <mat-card class="p-24px full-width">
+
+              <form
+                [formGroup]="contactForm"
+                (ngSubmit)="sendEmail()"
+                novalidate>
+
+                <h2 class="m-bottom-1em">
+                  Send Message
+                </h2>
+
+                <!-- Full Name -->
+
+                <mat-form-field
+                  appearance="fill"
+                  class="full-width">
+
+                  <mat-label>Full Name</mat-label>
+
+                  <input
+                    matInput
+                    placeholder="Joe Doe"
+                    formControlName="name">
+
+                  @if(contactForm.get('name')?.touched &&
+                      contactForm.get('name')?.hasError('required')) {
+
+                    <mat-error>
+                      Full name is required.
+                    </mat-error>
+
+                  }
+
+                </mat-form-field>
+
+
+                <!-- Email -->
+
+                <mat-form-field
+                  appearance="fill"
+                  class="full-width">
+
+                  <mat-label>Email</mat-label>
+
+                  <input
+                    matInput
+                    type="email"
+                    placeholder="example@domain.com"
+                    formControlName="email">
+
+                  @if(contactForm.get('email')?.touched &&
+                      contactForm.get('email')?.hasError('required')) {
+
+                    <mat-error>
+                      Email is required.
+                    </mat-error>
+
+                  }
+
+                  @if(contactForm.get('email')?.touched &&
+                      contactForm.get('email')?.hasError('email')) {
+
+                    <mat-error>
+                      Enter a valid email.
+                    </mat-error>
+
+                  }
+
+                </mat-form-field>
+
+
+                <!-- Message -->
+
+                <mat-form-field
+                  appearance="fill"
+                  class="full-width">
+
+                  <mat-label>Type your Message</mat-label>
+
+                  <textarea
+                    matInput
+                    rows="6"
+                    placeholder="Type your Message"
+                    formControlName="message">
+                  </textarea>
+
+                  @if(contactForm.get('message')?.touched &&
+                      contactForm.get('message')?.hasError('required')) {
+
+                    <mat-error>
+                      Message is required.
+                    </mat-error>
+
+                  }
+
+                </mat-form-field>
+
+
+                <!-- Buttons -->
+
+                <div class="flex center-center gap-2em">
+
+                  <button
+                    mat-raised-button
+                    color="warn"
+                    type="button"
+                    class="flex-1 cancel-btn btn-border-radius4"
+                    (click)="resetForm()">
+
+                    Cancel
+
+                  </button>
+
+                  <button
+                    mat-raised-button
+                    color="primary"
+                    type="submit"
+                    class="flex-1 btn-border-radius4"
+                    [class.submit-btn]="contactForm.valid"
+                    [disabled]="contactForm.invalid">
+
+                    Send
+
+                  </button>
+
+                </div>
+
+              </form>
+
+            </mat-card>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</div>

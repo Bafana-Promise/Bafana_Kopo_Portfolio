@@ -168,3 +168,30 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.mat-mdc-raised-button:not(:disabled) {
+    color: var(--mdc-protected-button-label-text-color, inherit);
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: var(--mdc-protected-button-container-color, transparent);
+}
+
+.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+    height: 36px;
+}
+
+.mat-mdc-raised-button.mat-warn, .mat-mdc-unelevated-button.mat-warn {
+    --mat-mdc-button-persistent-ripple-color: #fff;
+    --mat-mdc-button-ripple-color: rgba(255, 255, 255, .1);
+}
+
+.mat-mdc-raised-button.mat-warn {
+    --mdc-protected-button-container-color: #f44336;
+    --mdc-protected-button-label-text-color: #fff;
+}
+
+.mat-mdc-raised-button.mat-warn, .mat-mdc-unelevated-button.mat-warn {
+    --mat-mdc-button-persistent-ripple-color: #fff;
+    --mat-mdc-button-ripple-color: rgba(255, 255, 255, .1);
+}
