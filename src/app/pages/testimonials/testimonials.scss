@@ -1,0 +1,255 @@
+/* ===========================
+   Page Layout
+=========================== */
+
+section {
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.main-section {
+    width: 80%;
+}
+
+.m-bottom-2em {
+    margin-bottom: 2em;
+}
+
+.m-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.p-24px {
+    padding: 24px;
+}
+
+.gap-5em {
+    gap: 5em;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.header-font {
+    font-size: 58px;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    font-size: 18px;
+}
+
+.font-14 {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* ===========================
+   Carousel
+=========================== */
+
+.custom-carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.custom-carousel {
+    display: flex;
+    transition: transform .5s ease-in-out;
+}
+
+.card-container {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+mat-card {
+    position: relative;
+    width: 90%;
+    padding: 80px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+    background: white;
+    overflow: visible;
+}
+
+mat-card-content h2 {
+    margin-bottom: 4px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+mat-card-subtitle {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   Profile Image
+=========================== */
+
+.profile-image-container {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #ff9800;
+    overflow: hidden;
+    background: white;
+}
+
+.testimony-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.back,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.back {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Override Angular Material Mini FAB */
+
+.back.mat-mdc-mini-fab,
+.next.mat-mdc-mini-fab {
+    background: #009688 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+}
+
+.back:disabled {
+    background: #d8d8d8 !important;
+    color: #888 !important;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+
+    .main-section {
+        width: 90%;
+    }
+
+    mat-card {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header-font {
+        font-size: 42px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    mat-card {
+        width: 100%;
+        padding: 70px 24px 24px;
+    }
+
+    mat-card-content h2 {
+        font-size: 30px;
+    }
+
+    mat-card-subtitle {
+        font-size: 18px;
+    }
+
+    .profile-image-container {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
+
+    .back {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .main-section {
+        width: 95%;
+    }
+
+    .header-font {
+        font-size: 36px;
+    }
+
+    mat-card {
+        padding: 60px 20px 20px;
+    }
+
+    mat-card-content h2 {
+        font-size: 26px;
+    }
+
+    mat-card-subtitle {
+        font-size: 16px;
+    }
+
+    .profile-image-container {
+        width: 85px;
+        height: 85px;
+        top: -42px;
+    }
+
+    .back,
+    .next {
+        top: calc(100% + 30px);
+        transform: none;
+    }
+
+    .back {
+        left: 30%;
+    }
+
+    .next {
+        right: 30%;
+    }
+
+}

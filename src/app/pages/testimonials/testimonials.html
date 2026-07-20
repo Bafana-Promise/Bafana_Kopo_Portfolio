@@ -1,1 +1,98 @@
-<p>testimonials works!</p>
+<div class="flex center-center column">
+  <section class="flex column start-center full-width m-bottom-2em">
+
+    <div class="flex column gap-5em main-section">
+
+      <div class="p-24px b-box">
+
+        <div class="flex column gap-1em">
+
+          <h2 class="header-font">Testimonials</h2>
+
+          <p>
+            Dive into the shared experiences of those who've entrusted me with
+            their projects and educational journeys. From satisfied clients to
+            aspiring developers, explore the diverse array of success stories
+            that highlight the impact of my services and mentorship programs.
+          </p>
+
+          <div class="custom-carousel-container">
+
+            <div
+              class="custom-carousel flex"
+              [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+
+              @for (testimonial of testimonials; track testimonial.name) {
+
+                <div class="card-container flex center">
+
+                  <mat-card>
+
+                    <div class="flex center-center profile-image-container accent">
+
+                      <img
+                        mat-card-image
+                        class="testimony-card-image"
+                        [src]="testimonial.image"
+                        [alt]="testimonial.name">
+
+                    </div>
+
+                    <mat-card-content>
+
+                      <h2>{{ testimonial.name }}</h2>
+
+                      <mat-card-subtitle>
+                        {{ testimonial.role }}
+                      </mat-card-subtitle>
+
+                      @for (paragraph of testimonial.paragraphs; track paragraph) {
+
+                        <p class="m-bottom-1em font-14">
+                          {{ paragraph }}
+                        </p>
+
+                      }
+
+                    </mat-card-content>
+
+                  </mat-card>
+
+                </div>
+
+              }
+
+            </div>
+
+            <button
+              mat-mini-fab
+              color="primary"
+              class="back"
+              (click)="previousTestimonial()"
+              [disabled]="currentIndex === 0">
+
+              <mat-icon>navigate_before</mat-icon>
+
+            </button>
+
+            <button
+              mat-mini-fab
+              color="primary"
+              class="next"
+              (click)="nextTestimonial()"
+              [disabled]="currentIndex === testimonials.length - 1">
+
+              <mat-icon>navigate_next</mat-icon>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+</div>
