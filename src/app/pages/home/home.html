@@ -136,7 +136,7 @@
                                 alt="HTML 5">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>HTML 5</h2>
+                            <h2 class="tech-font-16">HTML 5</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -146,7 +146,7 @@
                                 alt="CSS3">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>CSS3</h2>
+                            <h2 class="tech-font-16">CSS3</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -156,7 +156,7 @@
                                 alt="SCSS">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>SCSS</h2>
+                            <h2 class="tech-font-16">SCSS</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -166,7 +166,7 @@
                                 alt="Javascript">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>Javascript</h2>
+                            <h2 class="tech-font-16">Javascript</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -176,7 +176,7 @@
                                 alt="Typescript">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>Typescript</h2>
+                            <h2 class="tech-font-16">Typescript</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -186,7 +186,7 @@
                                 alt="NodeJs">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>NodeJs</h2>
+                            <h2 class="tech-font-16">NodeJs</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -196,7 +196,7 @@
                                 alt="ExpressJs">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>ExpressJs</h2>
+                            <h2 class="tech-font-16">ExpressJs</h2>
                         </mat-card-content>
                     </mat-card><mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
                         <div class="flex center-center m-bottom-1em">
@@ -205,7 +205,7 @@
                                 alt="MongoDB">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>MongoDB</h2>
+                            <h2 class="tech-font-16">MongoDB</h2>
                         </mat-card-content>
                     </mat-card>
                     <mat-card class="mat-mdc-card mdc-card lessons ng-star-inserted">
@@ -215,7 +215,7 @@
                                 alt="PostGreSQL">
                         </div>
                         <mat-card-content class="mat-mdc-card-content text-center">
-                            <h2>PostGreSQL</h2>
+                            <h2 class="tech-font-16">PostGreSQL</h2>
                         </mat-card-content>
                     </mat-card><!---->
                 </div>
@@ -369,7 +369,7 @@
             </div>
         </div>
 
-        <div _ngcontent-ael-c35="" class="custom-carousel-container">
+        <!-- <div _ngcontent-ael-c35="" class="custom-carousel-container">
             <h2 _ngcontent-ael-c35="" class="header-font">Testimonials</h2>
 
             <p _ngcontent-ael-c35="">Dive into the shared experiences of those who've entrusted me with their projects
@@ -484,7 +484,93 @@
             </div>
 
 
+        </div> -->
+
+
+        <div class="flex column gap-5em">
+
+            <div class="b-box">
+
+                <div class="flex column gap-1em">
+
+                    <h2 class="header-font">Testimonials</h2>
+
+                    <p>
+                        Discover the experiences of the people I've had the privilege of working with throughout my
+                        career. From
+                        clients and teammates to aspiring software developers, these testimonials reflect the impact of
+                        my work,
+                        technical expertise, collaboration, and commitment to helping others grow. Each story represents
+                        meaningful
+                        partnerships, shared success, and the lasting relationships built along the way.
+                    </p>
+
+                    <div class="custom-carousel-container">
+
+                        <div class="custom-carousel flex"
+                            [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+
+                            @for (testimonial of testimonials; track testimonial.name) {
+
+                            <div class="card-container flex center">
+
+                                <mat-card>
+
+                                    <div class="flex center-center profile-image-container accent">
+
+                                        <img mat-card-image class="testimony-card-image" [src]="testimonial.image"
+                                            [alt]="testimonial.name">
+
+                                    </div>
+
+                                    <mat-card-content>
+
+                                        <h2>{{ testimonial.name }}</h2>
+
+                                        <mat-card-subtitle>
+                                            {{ testimonial.role }}
+                                        </mat-card-subtitle>
+
+                                        @for (paragraph of testimonial.paragraphs; track paragraph) {
+
+                                        <p class="m-bottom-1em font-14">
+                                            {{ paragraph }}
+                                        </p>
+
+                                        }
+
+                                    </mat-card-content>
+
+                                </mat-card>
+
+                            </div>
+
+                            }
+
+                        </div>
+
+                        <button mat-mini-fab color="primary" class="back" (click)="previousTestimonial()"
+                            [disabled]="currentIndex === 0">
+
+                            <mat-icon>navigate_before</mat-icon>
+
+                        </button>
+
+                        <button mat-mini-fab color="primary" class="next" (click)="nextTestimonial()"
+                            [disabled]="currentIndex === testimonials.length - 1">
+
+                            <mat-icon>navigate_next</mat-icon>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
 
     </div>
 

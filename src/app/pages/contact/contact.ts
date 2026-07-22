@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 import emailjs from '@emailjs/browser';
 
@@ -20,7 +21,8 @@ import emailjs from '@emailjs/browser';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
@@ -28,6 +30,7 @@ import emailjs from '@emailjs/browser';
 export class Contact {
 
   private fb = inject(FormBuilder);
+  private snackBar = inject(MatSnackBar);
 
   contactForm = this.fb.group({
     name: ['', Validators.required],
@@ -45,30 +48,47 @@ export class Contact {
     const form = this.contactForm.getRawValue();
 
     emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_a28c1b4',
+      'template_9z9g0vh',
       {
-        from_name: form.name,
-        from_email: form.email,
+        name: form.name,
+        emailFrom: form.email,
         message: form.message,
+        replyToEmail: form.email,
         to_email: 'bafanapromise1@gmail.com'
       },
-      'YOUR_PUBLIC_KEY'
+      'bl9hSewwoz0KS9YA6'
     )
-    .then(() => {
+      .then(() => {
 
-      alert('Message sent successfully!');
+        this.snackBar.open(
+          'Message sent successfully!',
+          'Close',
+          {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'bottom'
+          }
+        );
 
-      this.contactForm.reset();
+        this.contactForm.reset();
 
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
 
-      console.error(error);
+        console.error(error);
 
-      alert('Failed to send message.');
+        this.snackBar.open(
+          'Failed to send message.',
+          'Close',
+          {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'bottom'
+          }
+        );
 
-    });
+      });
 
   }
 

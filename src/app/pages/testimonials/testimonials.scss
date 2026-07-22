@@ -35,17 +35,18 @@ section {
     font-size: 58px;
     font-weight: 700;
     margin: 0;
+    padding-top: 80px;
 }
 
 p {
-    line-height: 1.8;
-    letter-spacing: 0.8px;
-    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-size: 16px;
 }
 
 .font-14 {
-    font-size: 16px;
-    line-height: 1.9;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 /* ===========================
@@ -56,7 +57,6 @@ p {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 80px;
 }
 
 .custom-carousel {
@@ -80,7 +80,7 @@ mat-card {
     width: 90%;
     padding: 80px 40px 40px;
     border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
     background: white;
     overflow: visible;
 }
@@ -92,9 +92,10 @@ mat-card-content h2 {
 }
 
 mat-card-subtitle {
-    font-size: 22px;
+    font-size: 15px;
     color: #666;
     margin-bottom: 30px;
+    margin-top: 12px;
 }
 
 /* ===========================
@@ -131,6 +132,7 @@ mat-card-subtitle {
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
+    border-radius: 50%;
 }
 
 .back {
@@ -147,10 +149,15 @@ mat-card-subtitle {
 .next.mat-mdc-mini-fab {
     background: #009688 !important;
     color: white !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    box-shadow: none;
 }
 
 .back:disabled {
+    background: #d8d8d8 !important;
+    color: #888 !important;
+}
+
+.next:disabled {
     background: #d8d8d8 !important;
     color: #888 !important;
 }
@@ -166,7 +173,7 @@ mat-card-subtitle {
     }
 
     mat-card {
-        width: 95%;
+        width: 80%;
     }
 
 }
@@ -182,7 +189,7 @@ mat-card-subtitle {
     }
 
     mat-card {
-        width: 100%;
+        width: 70%;
         padding: 70px 24px 24px;
     }
 
@@ -240,16 +247,16 @@ mat-card-subtitle {
 
     .back,
     .next {
-        top: calc(100% + 30px);
+        // top: calc(100% + 30px);
         transform: none;
     }
 
     .back {
-        left: 30%;
+        left: 0;
     }
 
     .next {
-        right: 30%;
+        right: 0;
     }
 
 }

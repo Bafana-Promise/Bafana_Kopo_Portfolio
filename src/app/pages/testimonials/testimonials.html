@@ -10,76 +10,62 @@
           <h2 class="header-font">Testimonials</h2>
 
           <p>
-            Dive into the shared experiences of those who've entrusted me with
-            their projects and educational journeys. From satisfied clients to
-            aspiring developers, explore the diverse array of success stories
-            that highlight the impact of my services and mentorship programs.
+            Discover the experiences of the people I've had the privilege of working with throughout my career. From
+            clients and teammates to aspiring software developers, these testimonials reflect the impact of my work,
+            technical expertise, collaboration, and commitment to helping others grow. Each story represents meaningful
+            partnerships, shared success, and the lasting relationships built along the way.
           </p>
 
           <div class="custom-carousel-container">
 
-            <div
-              class="custom-carousel flex"
-              [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+            <div class="custom-carousel flex" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
 
               @for (testimonial of testimonials; track testimonial.name) {
 
-                <div class="card-container flex center">
+              <div class="card-container flex center">
 
-                  <mat-card>
+                <mat-card>
 
-                    <div class="flex center-center profile-image-container accent">
+                  <div class="flex center-center profile-image-container accent">
 
-                      <img
-                        mat-card-image
-                        class="testimony-card-image"
-                        [src]="testimonial.image"
-                        [alt]="testimonial.name">
+                    <img mat-card-image class="testimony-card-image" [src]="testimonial.image" [alt]="testimonial.name">
 
-                    </div>
+                  </div>
 
-                    <mat-card-content>
+                  <mat-card-content>
 
-                      <h2>{{ testimonial.name }}</h2>
+                    <h2>{{ testimonial.name }}</h2>
 
-                      <mat-card-subtitle>
-                        {{ testimonial.role }}
-                      </mat-card-subtitle>
+                    <mat-card-subtitle>
+                      {{ testimonial.role }}
+                    </mat-card-subtitle>
 
-                      @for (paragraph of testimonial.paragraphs; track paragraph) {
+                    @for (paragraph of testimonial.paragraphs; track paragraph) {
 
-                        <p class="m-bottom-1em font-14">
-                          {{ paragraph }}
-                        </p>
+                    <p class="m-bottom-1em font-14">
+                      {{ paragraph }}
+                    </p>
 
-                      }
+                    }
 
-                    </mat-card-content>
+                  </mat-card-content>
 
-                  </mat-card>
+                </mat-card>
 
-                </div>
+              </div>
 
               }
 
             </div>
 
-            <button
-              mat-mini-fab
-              color="primary"
-              class="back"
-              (click)="previousTestimonial()"
+            <button mat-mini-fab color="primary" class="back" (click)="previousTestimonial()"
               [disabled]="currentIndex === 0">
 
               <mat-icon>navigate_before</mat-icon>
 
             </button>
 
-            <button
-              mat-mini-fab
-              color="primary"
-              class="next"
-              (click)="nextTestimonial()"
+            <button mat-mini-fab color="primary" class="next" (click)="nextTestimonial()"
               [disabled]="currentIndex === testimonials.length - 1">
 
               <mat-icon>navigate_next</mat-icon>
