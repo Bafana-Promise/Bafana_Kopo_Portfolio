@@ -33,7 +33,6 @@ export class Home {
     {
       title: 'Web Design',
       skills: [
-        'UI/UX Design',
         'Responsive Design',
         'Wireframing',
         'Figma'
@@ -45,8 +44,7 @@ export class Home {
         'HTML 5',
         'CSS3',
         'Javascript',
-        'Angular',
-        'React'
+        'Angular'
       ]
     },
     {
