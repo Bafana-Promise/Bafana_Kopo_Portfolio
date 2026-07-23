@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { Loader } from '../loader/loader'
 
 import emailjs from '@emailjs/browser';
 
@@ -22,7 +23,8 @@ import emailjs from '@emailjs/browser';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    Loader
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
@@ -32,6 +34,8 @@ export class Contact {
   private fb = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
 
+  loading = false;
+
   contactForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -39,6 +43,8 @@ export class Contact {
   });
 
   sendEmail(): void {
+
+    this.loading = true;
 
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
@@ -61,6 +67,8 @@ export class Contact {
     )
       .then(() => {
 
+        this.loading = false;
+
         this.snackBar.open(
           'Message sent successfully!',
           'Close',
@@ -77,6 +85,8 @@ export class Contact {
       .catch((error) => {
 
         console.error(error);
+
+        this.loading = false;
 
         this.snackBar.open(
           'Failed to send message.',
